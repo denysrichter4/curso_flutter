@@ -5,6 +5,7 @@ import 'package:curso_flutter/CrudSimples/routes/app_routes.dart';
 import 'package:curso_flutter/CrudSimples/views/user_form.dart';
 import 'package:curso_flutter/componentes/Componentes.dart';
 import 'package:curso_flutter/frases_do_dia/FrasesDoDia.dart';
+import 'package:curso_flutter/alcool_ou_gasolina/alcool_ou_gasolina.dart';
 import 'package:curso_flutter/lista_de_todos_os_apps/routes.dart';
 import 'package:provider/provider.dart';
 
@@ -31,6 +32,7 @@ class ListaDeApps extends StatelessWidget {
           Routes.CRUD_SIMPLES: (_)=> UserList(),
           Routes.FRASES_DO_DIA: (_)=> FrasesDoDia(),
           Routes.JOKENPO: (_)=> Jokenpo(),
+          Routes.ALCOOL_OU_GASOLINA: (_)=> AlcoolOuGasolina(),
           AppRoutes.USER_FORM: (_)=> UserForm()
         },
       ),
@@ -97,6 +99,19 @@ class MyappHomeList extends StatelessWidget{
               'Jokenpo',
               style: TextStyle(
                 fontSize: 40,
+              ),
+            ),
+          ),
+          TextButton(
+            onPressed: (){
+              Navigator.of(context).pushNamed(
+                  Routes.ALCOOL_OU_GASOLINA
+              );
+            },
+            child:Text(
+              'Álcool ou Gasolina?',
+              style: TextStyle(
+                fontSize: 30,
               ),
             ),
           ),

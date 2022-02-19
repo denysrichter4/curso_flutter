@@ -50,6 +50,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
+     - images/alcool_ou_gasolina/logo.png
      - images/frases_do_dia/logo.png
      - images/jokenpo/padrao.png
      - images/jokenpo/papel.png
