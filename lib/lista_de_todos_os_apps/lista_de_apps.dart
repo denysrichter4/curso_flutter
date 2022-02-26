@@ -1,4 +1,6 @@
+import 'package:curso_flutter/atm_consultoria/atm_home.dart';
 import 'package:curso_flutter/jokenpo/Jokenpo.dart';
+import 'package:curso_flutter/salario_liquido/presenter/salario_view.dart';
 import 'package:flutter/material.dart';
 import 'package:curso_flutter/CrudSimples/provider/users.dart';
 import 'package:curso_flutter/CrudSimples/routes/app_routes.dart';
@@ -33,6 +35,8 @@ class ListaDeApps extends StatelessWidget {
           Routes.FRASES_DO_DIA: (_)=> FrasesDoDia(),
           Routes.JOKENPO: (_)=> Jokenpo(),
           Routes.ALCOOL_OU_GASOLINA: (_)=> AlcoolOuGasolina(),
+          Routes.SALARIO_LIQUIDO: (_)=> SalarioView(),
+          Routes.ATM_CONSULTORIA: (_)=> HomeAtm(),
           AppRoutes.USER_FORM: (_)=> UserForm()
         },
       ),
@@ -112,6 +116,32 @@ class MyappHomeList extends StatelessWidget{
               'Álcool ou Gasolina?',
               style: TextStyle(
                 fontSize: 30,
+              ),
+            ),
+          ),
+          TextButton(
+            onPressed: (){
+              Navigator.of(context).pushNamed(
+                  Routes.SALARIO_LIQUIDO
+              );
+            },
+            child:Text(
+              'Cálculo do Salário Líquido',
+              style: TextStyle(
+                fontSize: 25,
+              ),
+            ),
+          ),
+          TextButton(
+            onPressed: (){
+              Navigator.of(context).pushNamed(
+                  Routes.ATM_CONSULTORIA
+              );
+            },
+            child:Text(
+              'ATM Consultoria',
+              style: TextStyle(
+                fontSize: 40,
               ),
             ),
           ),
